@@ -505,7 +505,9 @@ def trigger_build_with_same_revision(orig_build=None,
     #     comment=comment)
     # print("Build Triggered:{}".format(trigger_info['build']['webUrl']))
     # return trigger_info['build']['webUrl']
-    return 'aa'
+    url = "https://teamcity02-or.intel.com/viewLog.html?buildId=11417887&buildTypeId=SsgCiCtrl_TagAndBuild"
+    print("Build Triggered:{}".format(url))
+    return url
 
 
 def main():
@@ -533,7 +535,6 @@ def main():
         val = kv.split("=")[1]
         build_props[key] = val
 
-    print(build_props)
     trigger_build_with_same_revision(orig_build=args.orig_build,
                                      verbose=args.verbose,
                                      user=args.user,
