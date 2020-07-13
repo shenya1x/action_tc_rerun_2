@@ -505,8 +505,7 @@ def trigger_build_with_same_revision(orig_build=None,
     #     comment=comment)
     # print("Build Triggered:{}".format(trigger_info['build']['webUrl']))
     # return trigger_info['build']['webUrl']
-    print('Build Triggered:https://teamcity02-or.intel.com/buildConfiguration/SsgCiCtrl_ReviewBuildsTestAkshayRerun')
-    return 'https://teamcity02-or.intel.com/buildConfiguration/SsgCiCtrl_ReviewBuildsTestAkshayRerun'
+    return 'aa'
 
 
 def main():
@@ -529,8 +528,7 @@ def main():
         }
     else:
         build_props = {}
-    for kv in args.other_param.split(","):
-        print(kv)
+    for kv in args.other_param.split(";"):
         key = kv.split("=")[0]
         val = kv.split("=")[1]
         build_props[key] = val
