@@ -505,7 +505,7 @@ def trigger_build_with_same_revision(orig_build=None,
     #     comment=comment)
     # print("Build Triggered:{}".format(trigger_info['build']['webUrl']))
     # return trigger_info['build']['webUrl']
-    url = "https://teamcity02-or.intel.com/viewLog.html?buildId=11417887&buildTypeId=SsgCiCtrl_TagAndBuild"
+    url = "https://teamcity02-or.intel.com/viewQueued.html?itemId=11701700"
     print("Build Triggered:{}".format(url))
     return url
 
