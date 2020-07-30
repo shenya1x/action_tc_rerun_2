@@ -534,6 +534,8 @@ def main():
         key = kv.split("=")[0]
         val = kv.split("=")[1]
         build_props[key] = val
+    
+    print(build_props)
 
     trigger_build_with_same_revision(orig_build=args.orig_build,
                                      verbose=args.verbose,
